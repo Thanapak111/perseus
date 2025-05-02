@@ -1,0 +1,41 @@
+package server
+
+import (
+	"context"
+	"embed"
+	"fmt"
+	"io/fs"
+	"net/http"
+	"time"
+
+	"github.com/stiffromain/perseus/internal/store"
+)
+
+//go:embed web
+var webContent embed.FS
+
+// handleUX serves the web UI for the service
+func handleUX() http.Handler {
+	content, err := fs.Sub(webContent, "web")
+	if err != nil {
+		// panic so we don't clutter the code with handling unrecoverable errors
+		panic(fmt.Errorf("unable to resolve 'web/' directory in embedded content: %w", err))
+	}
+	return http.StripPrefix("/ui/", http.FileServer(http.FS(content)))
+}
+
+// handleHealthz exposes an HTTP health check endpoint that responds with '200 OK' if the service is
+// healthy (can connect to the Perseus database) and '500 Internal Server Error' if not
+func handleHealthz(db store.Store, timeout time.Duration, log Logger) http.Handler {
+	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		ctx, cancel := context.WithTimeout(r.Context(), timeout)
+		defer cancel()
+		if err := db.Ping(ctx); err != nil {
+			log.Error(err, "Failing health check due to ping timeout", "timeout", timeout.String())
+			w.WriteHeader(http.StatusInternalServerError)
+			return
+		}
+		w.WriteHeader(http.StatusOK)
+		fmt.Fprint(w, "Krakens beware!")
+	})
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="/ui/css/water.light.min.css" />
+  <noscript>JavaScript is required</noscript>
+  <style>
+    body {
+      max-width: 1210px;
+    }
+    select {
+      display: inline;
+    }
+  </style>
+</head>
+
+<body>
+  <div><a href="/ui">All Modules</a></div>
+  <h2 id="title"></h2>
+  <div>
+    <label for="version">Version</label>
+    <select id="version" name="version"></select>
+
+    <label for="direction">Direction</label>
+    <select id="direction" name="direction"></select>
+  </div>
+
+  <div style="border:2px solid #EC3525; border-radius: 4px;">
+    <div style="margin: 4px 8px;"><span id="nodecount" style="font-style:italic"></span></div>
+    <svg id="graph" width="1200" height="900"></svg>
+  </div>
+
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <script src="/ui/js/graph.js"></script>
+  <script src="/ui/js/data.js"></script>
+  <script src="/ui/js/module.js"></script>
+</body>
